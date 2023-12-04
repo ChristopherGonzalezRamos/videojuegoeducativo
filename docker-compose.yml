@@ -1,9 +1,10 @@
-version: "3"
+version: '3'
 services:
-  web-service:
-    build: .
-    volumes:
-      - .:/app
-      - /app/node_modules
-    ports:
-      - 3001:80
+    web-service:
+        build: .
+        volumes:
+            - .:/app
+            - /app/node_modules
+        ports:
+            - 3001:80
+        command: ["npm", "run", "debug"]

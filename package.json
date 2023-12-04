@@ -4,8 +4,9 @@
   "description": "Proyecto de un videojuego educativo para enseñar mientras juegan conceptos de cómputo y temas derivados de este.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node ./src/app.js",
+    "debug": "nodemon ./src/app.js -L"
+},
   "author": "",
   "license": "ISC",
   "dependencies": {

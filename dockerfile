@@ -1,15 +1,17 @@
-# Crear imagen a partir de Node.js
-# Versión Soporte a Largo Plazo - Ligera
+# Utilizar imagen base de Node.js
 FROM node:lts-slim
 
-# Crea y cambiamos al directorio /app
-WORKDIR /app
+# Crear y cambiar el directorio actual a /app
+WORKDIR /app/
 
-# Copia el contenido del proyecto a /app
+# Copiar archivo de dependencias.
+COPY ./package*.json /app/
+
+# Copiar el contenido del proyecto actual a /app
 COPY . /app/
 
-# Exponer el puerto 80
+# Exponer puerto 80
 EXPOSE 80
 
-# Iniciar el servidor de node
-CMD ["node", "app.js"]
+# Iniciar aplicación
+CMD ["npm", "start"]
