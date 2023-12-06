@@ -1,10 +1,25 @@
-version: '3'
+version: "3"
 services:
-    web-service:
-        build: .
-        volumes:
-            - .:/app
-            - /app/node_modules
-        ports:
-            - 3001:80
-        command: ["npm", "run", "debug"]
+  web-service:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - 3001:80
+    command: ["npx","nodemon","app.js","-L"]
+  mysql:
+    image: mysql:8.0.35
+    volumes: 
+      - mysql_data:/var/lib/mysql
+    expose:
+      - 3306
+    ports:
+      - 33021:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: videojuego
+      MYSQL_USER: user_videojuego
+      MYSQL_PASSWORD: 54321
+volumes:
+  mysql_data: 
