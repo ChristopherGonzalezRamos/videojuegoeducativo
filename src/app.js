@@ -5,11 +5,11 @@ const puerto = 80;
 const UsuariosController = require('./controllers/UsuariosController');
 app.use(express.json());
 app.get('/usuarios', UsuariosController.indexGet);
-app.get('/usuarios/id([0-9]+)', UsuariosController.itemGet);
 
 const ProgresoController = require('./controllers/ProgresoController');
 app.use(express.json());
 app.get('/progreso', ProgresoController.indexGet);
+app.get('/progreso/id([0-9]+)', ProgresoController.itemGet);
 
 app.get('/', function (req, res) {
     res.statusCode = 200;
