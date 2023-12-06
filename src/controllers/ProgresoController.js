@@ -1,4 +1,4 @@
-const ProgresoModel= require("../models/ProgresoModel");
+const ProgresoModel = require("../models/ProgresoModel");
 
  class ProgresoController{
     static async indexGet(req,res){

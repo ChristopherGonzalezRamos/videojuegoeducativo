@@ -2,7 +2,6 @@
   "name": "videojuego-educativo",
   "version": "1.0.0",
   "description": "Proyecto de un videojuego educativo para enseñar mientras juegan conceptos de cómputo y temas derivados de este.",
-  "main": "app.js",
   "scripts": {
     "start": "node ./src/app.js",
     "debug": "nodemon ./src/app.js -L",
@@ -18,5 +17,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }
