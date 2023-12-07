@@ -14,13 +14,13 @@ class ProgresoModel
 
     static async insertar(datos) {
         let db = await connectMysql();
-        const result = await db('progreso').insert(datos).returning('id_tema');
+        const result = await db('progreso').insert(datos).returning('id_progreso');
         return result[0];
     }
 
-    static async actualizar(id, tipo_progreso) {
+    static async actualizar(id, campos) {
         let db = await connectMysql();
-        return await db('progreso').where('id_progreso', id).update(tipo_progreso);
+        return await db('progreso').where('id_progreso', id).update(campos);
     }
 
     static async reemplazar(id, newData) {

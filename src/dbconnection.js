@@ -1,7 +1,7 @@
 const fs = require('fs');
 const knex = require('knex');
 
-const connectToMysql = async function(){
+const connectMysql = async function(){
     const dbPassword = await fs.promises.readFile('/run/secrets/db_password');
     const db = knex({
         client: 'mysql2',
@@ -14,4 +14,4 @@ const connectToMysql = async function(){
     });
     return db;
 }
-module.exports = {connectToMysql};
+module.exports = {connectMysql};

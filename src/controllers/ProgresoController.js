@@ -52,16 +52,6 @@ class ProgresoController
         }
     }
 
-    /**
-     * Recibe una petición para actualizar parte de un recurso:
-     * 
-     * ```http
-     *   PATCH /temas/{id}
-     *   Content-Type: application/json
-     * 
-     *   {"nombre": "Nuevo nombre del tema"}
-     * ```
-     */
     static async itemPatch(req, res) {
         try {
             const id = req.params.id;
@@ -81,4 +71,4 @@ class ProgresoController
     }
 }
 
-module.exports = TemasController;
+module.exports = ProgresoController;
