@@ -20,5 +20,6 @@
   },
   "directories": {
     "doc": "docs"
-  }
+  },
+  "main": "index.js"
 }
